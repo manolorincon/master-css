@@ -1,0 +1,113 @@
+/*
+ * Se leen de arriba a abajo, es decir, 
+ * si encontramos un estilo primero a un h1 y luego aparece otro estilo al h1, 
+ * este reemplaza el anterior
+ * Selectores;
+ * Seleccionar el elemento de un HTML y darle un estilo
+ */
+
+/*Selector universal => Permite seleccionar todo el documento HTML*/
+
+ * {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     /*margin: 0px; /*Quitamos márgenes a los elementos*/
+     /*padding: 0px; /* margen pero interno, dentro de un elemento */
+ }
+
+
+/*Selector de etiqueta o tipo => permite seleccionar un elemento con una etiqueta concrecta (h1, p, h2, etc) */
+h1 {
+    background: red;
+    color: white;
+    padding: 10px; /*Margen interior*/
+}
+
+a {
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+
+/*Seleccionamos un elemento que esté dentro del footer, en este caso los enlaces (selector compuesto) */
+footer a {
+    color: red;
+}
+
+
+/*Selector de ID*/
+#descripcion {
+    border: 5px solid black;
+    padding: 15px;
+}
+
+#titulo {
+    background: blue;
+    border: 2px dashed white;
+}
+
+/*
+ *compartir estilos
+ * #titulo, #descripcion { css }
+ */
+
+/*Selector de clase*/
+
+.parrafo {
+    font-style: italic; /*texto en cursiva*/
+    /*text-decoration: underline; /*linea o subrayado*/
+    font-weight: bold; /*negrita*/
+}
+
+.parrafo1 {
+    background-color: green;
+    color: white; /*color de fuente*/
+    padding: 10px;
+}
+
+/*Selector de atributo*/
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+#usuario form * {
+    display: block; /*que los elementos se comporten como texto (uno alado de otro) o uno en cada línea*/
+}
+
+/*por atributo*/
+input[type="text"] {
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 300px;
+}
+
+input[type="submit"] {
+    background: green;
+    color: white;
+    padding: 15px;
+    font: 15px;
+    text-transform: uppercase; /*permite transformar de minusc a mayusc o viceversa*/
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/*Selectores hijos*/
+/*ul - li */
+#menu > li > a {
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+/*Prioridad => darle mas prioridad a los estilos que estén mas abajo, reemplaza lo anterior*/
+/*CSS premia las reglas mas específicas, por eso #saludo reemplaza a h1 */
+
+#saludo h1 {
+    background: brown;
+}
+
+h1 {
+    background: purple !important;/*Si le agregamos el important, esta predomina sobre las demás*/
+}

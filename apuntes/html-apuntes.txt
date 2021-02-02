@@ -1,0 +1,9 @@
+<!--
+    h1 => Titulo
+    h2 => Subtitulo
+    html => etiqueta que contiene todos los elementos y etiquetas de la página web
+        lang => página en español
+    head => cabecera de información de la página
+    body => toda la info y etiquetas que se mostrará en la página web
+
+-->

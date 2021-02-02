@@ -1,0 +1,20 @@
+body {
+    background-color: #ccc;
+    background-image: url('./fondos/patron1.jpg');
+    background-attachment: fixed; /*el fondo nunca se mueve, se queda fijo*/
+    background-position: left bottom;/*mover el fondo*/
+}
+
+#caja {
+    border: 5px solid black;
+    padding: 10px;
+    background-color: rgb(145, 89, 89);
+    color: white;
+    /*Ajustar alineamiento del texto*/
+    text-align: right;
+    line-height: 50px; /*Como el 1,0 1,5 de word (altura de línea)*/
+    text-decoration: line-through;
+    text-indent: 15px;/*Identación / Sangría*/
+    word-spacing: 10px; /*separación de palabras*/
+    /*letter-spacing: 10px;/*separación de letras*/
+}

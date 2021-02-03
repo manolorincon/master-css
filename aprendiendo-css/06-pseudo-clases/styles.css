@@ -1,0 +1,60 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+    font-size: 20px;
+}
+
+ul li:first-child {
+    color: green;
+}
+
+ul li:nth-child(2) {
+    color: orange;
+}
+
+ul li:last-child {
+    color: red;
+}
+
+#mi-enlace {
+    font-size: 30px;
+    color: lightsalmon;
+}
+
+/*pseudoclases*/
+
+/*cuando no se haya visitado el enlace se coloque rojo*/
+#mi-enlace:link {
+    color: red;
+}
+
+/*cuando se haya visitado el enlace se coloque purple*/
+#mi-enlace:visited {
+    color: purple;
+}
+
+#mi-enlace:hover{
+    color: blue;
+}
+
+/*cuando se esté pulsando le de un estilo distinto*/
+#mi-enlace:active{
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type="text"]:hover {
+    cursor: not-allowed;
+}
+
+input[type="text"]:focus {
+    border: none;
+    border: 5px dashed red;
+}

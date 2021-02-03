@@ -1,0 +1,31 @@
+Posicionamiento
+
+- Overflow: Es una propiedad que permite controlar lo que sale de una caja y lo que queda adentro.
+    overflow-x, overflow-y
+
+Position:
+
+- Relativa: position: relative; viene por defecto y es la que normalmente se usa.
+
+- Absoluta: position: absolute; todo lo unifica y lo pone en la misma posición.
+
+Para mover un elemento libre donde uno quiera se tiene que utilizar la posición Absoluta.
+
+z-index: 2;/*Le indica al CSS que capa está encima de la otra*/
+El que tenga el z-index mas alto, será aquel que predomine, es decir, estará encima de los demás.
+
+
+- Fija: será una posición fija, y nos acompañará cuando hagamos scroll.
+position: fixed;
+
+
+Pseudoclases
+
+li:<algo>
+p:<algo>
+
+Transiciones: transicion de un elemento cuando pasemos por encima con el ratón o cuando ocurra otro evento.
+
+Animaciones: no se lanzan cuando haces un hover. 
+Se deben definir los keyframe antes que nada
+@keyframes

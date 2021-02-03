@@ -1,7 +1,7 @@
 /*  
 
-    1.- Crear Documento HTML y vincularlo con CSS    
-    2.- Crear estructura HTML que contenga:
+    1.- Crear Documento HTML y vincularlo con CSS (hecho)
+    2.- Crear estructura HTML que contenga: (hecho)
         Contenedor General,
         Cabecera
         Menu
@@ -9,12 +9,155 @@
         Seccion de contenido principal
         elementos dentro del contenedor principal
         footer
-    3.- Todo el contenido debe estar dentro del contenedor general y su ancho sera de 1200px
-    4.- Header debe contener el 100% del ancho y tener un texto grande centrado
-    5.- Menú debe tener los elementos uno al lado del otro
-    6.- Contenido principal debe tener un ancho del 70%
-    7.- El contenido dentro del contenedor principal debe ser una cuadrícula con 4 líneas de 2 cajas
-    8.- La barra lateral debe tener un ancho de 30%
-    9.- El footer debe tener un ancho del 100% del div que lo contiene y estar abajo del todo.
+    3.- Todo el contenido debe estar dentro del contenedor general y su ancho sera de 1200px (hecho)
+    4.- Header debe contener el 100% del ancho y tener un texto grande centrado (hecho)
+    5.- Menú debe tener los elementos uno al lado del otro (hecho)
+    6.- Contenido principal debe tener un ancho del 70% (hecho)
+    7.- El contenido dentro del contenedor principal debe ser una cuadrícula con 4 líneas de 2 cajas (hecho)
+    8.- La barra lateral debe tener un ancho de 30% (hecho)
+    9.- El footer debe tener un ancho del 100% del div que lo contiene y estar abajo del todo. 
 
 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#general {
+    width: 1200px;
+    margin: 0px auto; /*centra el elemento en medio de la página*/
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background: rgb(130, 130, 179);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    line-height: 90px; /*centrado verticalmente*/
+}
+
+#menu {
+    background: #EEE;
+}
+
+#menu ul li {
+    display: block;
+    float: left;    
+    border-right: 1px solid #ccc;
+}
+
+#menu ul li a {
+    display: block;
+    padding: 15px;
+    color: rgb(53, 49, 49);
+}
+
+#menu ul li:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+#menu ul li:hover a{
+    color: white;
+}
+
+.clear-fix {
+    float: none;
+    clear: both;/*Limpiar los flotados de la izquierda y de la derecha*/
+}
+
+#contenido {
+    display: block;
+    width: 69%;
+    float: left;
+}
+
+#lateral {
+    display: block;
+    width: 30%;
+    border: 1px solid black;
+    float: left;
+    min-height: 500px;
+    max-height: 650px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*controlar todo lo que se sale de la caja*/
+    /*overflow: hidden; /*hidden => se oculta lo que se salga de la caja*/
+    overflow-y: scroll; /*hidden => se oculta lo que se salga de la caja*/
+}
+
+#contenido .caja {
+    width: 40%;
+    height: 250px;
+    background: #ccc;
+    border: 1px solid gray;
+    color: #444;
+    float: left;
+    margin: 20px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 200px;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 5px 15px 4px 61px ;
+}
+
+.sombra-interior {
+    box-shadow: 5px 5px 15px black inset !important;
+}
+
+#contenido > h1 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    color: #444;
+    text-shadow: 1px 1px 2px #ccc; /*X, Y, Opacidad, Color*/
+}
+
+#footer {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background: #EEE;
+    text-align: center;
+    color: #444;
+    border-top: 1px solid #ccc;
+}
+
+.libre {
+    position: absolute;
+    /*top: 0px; /*se pone en el pixel 0 desde arriba*/
+    top: 300px;
+    left: 50%;
+    /*right: 40%;*/
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+
+
+.libre1 {
+    z-index: 2;/*Le indica al CSS que capa está encima de la otra*/
+}
+
+.libre2 {
+    background-color: green;
+    top: 280px;
+    left: 50%;
+    z-index: 1;/*Le indica al CSS que capa está encima de la otra*/
+}
+
+.fija {
+    position: fixed;
+    background-color: blue;
+    top: 50%;
+    left: 0px;
+}

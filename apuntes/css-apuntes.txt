@@ -29,3 +29,22 @@ Transiciones: transicion de un elemento cuando pasemos por encima con el ratón 
 Animaciones: no se lanzan cuando haces un hover. 
 Se deben definir los keyframe antes que nada
 @keyframes
+
+
+    Margin
+      *
+      *
+ ___________
+|     |     |
+| Padding   |
+|     |     |
+|_____|_____|
+
+      *
+      *
+    Margin
+
+
+Cambiar viñeta de una lista:
+
+list-style: <opcion>;

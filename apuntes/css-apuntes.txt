@@ -67,3 +67,6 @@ npm i -g less
 --Compilar archivo CSS
 c:/...../<directorio-proyecto>/aprendiendo-less
 lessc estilos.less styles.css
+
+
+css grid tiene columnas y filas, a diferencia de flexbox que todo era vertical u horizontal.

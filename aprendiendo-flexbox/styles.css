@@ -1,0 +1,64 @@
+body{
+    --rojo: red;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout{
+    display: flex; /*sería similar a float: left; alineado uno al lado del otro. Acá tiene un width del 100%*/
+    /*display: inline-flex; el width se adapta al tamaño o la cantidad de cajas*/
+    /*flex-direction: row; /*column, ***-reverse (cambia el orden) */
+    /*
+    flex-wrap: wrap;/*cuando la cantidad de cajas se sale de la section, continúen en la línea de abajo
+    */
+    flex-flow: row wrap; /*Une el direction y el wrap*/
+    justify-content: space-evenly;
+    height: 600px;
+    /*justify-content: space-between;/*flex end: float right, flex start float left*/
+    /*align-items: flex-start;*/
+
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja {
+    flex-grow: 1; /*adapta el tamaño de las cajas al mismo tamaño. Las cajas comparten el mismo tamaño entre el disponible que hay*/
+    /*flex-basis: 25%;/*indica a cada una de las cajas dentro del contenedor, que tamaño base van a tener, y apartir de ahí expandirse o reducirse*/
+    /*flex-basis: calc( (100%/3) - 68px);*/
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background-color: gray;
+}
+
+.red {
+    align-self: flex-start;
+    /*flex-grow: 10; aumenta el tamaño de la caja*/
+    /*flex-shrink: 0; disminuye el tamaño de la caja*/
+    /*order: 1;*/
+    background-color: var(--rojo);
+}
+
+.green {
+    align-self: center;
+    /*order: 2;*/
+    background-color: green;
+}
+
+.blue {
+    align-self: center;
+    /*order: 3;*/
+    background-color: blue;
+}
+
+.orange {
+    align-self: flex-end;
+    /*flex-basis: 100%;*/
+    /*order: 4;*/
+    background-color: orange;
+}
+

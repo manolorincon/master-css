@@ -48,3 +48,22 @@ Se deben definir los keyframe antes que nada
 Cambiar viñeta de una lista:
 
 list-style: <opcion>;
+
+
+--Instalar saas
+npm i -g saas
+
+--Compilar archivo CSS
+c:/...../<directorio-proyecto>/aprendiendo-sass
+saas --watch estilos.scss styles.css
+
+Mixin
+agrupación o conjunto de instrucciones que se van a ejecutar.
+
+
+--Instalar Less
+npm i -g less  
+
+--Compilar archivo CSS
+c:/...../<directorio-proyecto>/aprendiendo-less
+lessc estilos.less styles.css

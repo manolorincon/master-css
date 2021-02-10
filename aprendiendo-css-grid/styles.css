@@ -2,6 +2,147 @@ body {
     text-align: center;
 }
 
+
+/* WebSite areas */
+#website-areas * {
+    margin: 0px;
+    padding: 0px
+}
+#website-areas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+    grid-template-areas: 
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "pie-pagina pie-pagina pie-pagina pie-pagina pie-pagina"; 
+
+    width: 75%;
+    height: 100vh; /*altura del navegador*/
+    margin: 0px auto;
+    border: 1px solid #CCC;
+}
+
+#website-areas #cabecera {
+    grid-area: cabecera;
+    /*Para alinear un texto en el centro horizontal y verticalmente*/
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: blue;
+    color: white;
+}
+
+#website-areas #menu {
+    grid-area: menu;
+    background-color: lightblue;
+    color: black;
+    line-height: 70px;
+}
+
+#website-areas #menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+}
+
+#website-areas #contenido {
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 25px;
+    background-color: #EEE;
+}
+
+#website-areas #contenido article {
+    background-color: #CCC;
+    border: 1px solid #555;
+}
+
+#website-areas #lateral {
+    grid-area: lateral;
+    background-color: orange;
+    color: white;
+}
+
+#website-areas #pie-pagina {
+    grid-area: pie-pagina;
+    background-color: black;
+    color: white
+}
+
+
+/* Ejercicios Completos */
+#website * {
+    margin: 0px;
+    padding: 0px
+}
+#website {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+    width: 75%;
+    height: 100vh; /*altura del navegador*/
+    margin: 0px auto;
+    border: 1px solid #CCC;
+}
+
+#website #cabecera {
+    /*Para alinear un texto en el centro horizontal y verticalmente*/
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    grid-column: 1 / 6;
+    background-color: blue;
+    color: white;
+}
+
+#website #menu {
+    grid-column: 1 / 6;
+    background-color: lightblue;
+    color: black;
+    line-height: 70px;
+}
+
+#website #menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+}
+
+#website #contenido {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 25px;
+    background-color: #EEE;
+}
+
+#website #contenido article {
+    background-color: #CCC;
+    border: 1px solid #555;
+}
+
+#website #lateral {
+    grid-column: 5 / 6;
+    background-color: orange;
+    color: white;
+}
+
+#website #pie-pagina {
+    grid-column: 1 / 6;
+    background-color: black;
+    color: white
+}
+
+
+
+
+
+/* Ejemplos */
 .layout  {
     width: 80%;
     height: 400px;
